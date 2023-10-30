@@ -5,11 +5,14 @@ import {
   Paragraph,
   Separator,
   Sheet,
+  Slider,
   useToastController,
   XStack,
   YStack,
 } from '@my/ui'
 import { ChevronDown, ChevronUp } from '@tamagui/lucide-icons'
+import { CardDemo } from 'app/components/card'
+import { SliderDemo } from 'app/components/slider'
 import React, { useState } from 'react'
 import { useLink } from 'solito/link'
 
@@ -21,7 +24,7 @@ export function HomeScreen() {
   return (
     <YStack f={1} jc="center" ai="center" p="$4" space>
       <YStack space="$4" maw={600}>
-        <H1 ta="center">Welcome to Tamagui.</H1>
+        <H1 ta="center">Hello Zhanton! Welcome to Tamagui.</H1>
         <Paragraph ta="center">
           Here's a basic starter to show navigating from one screen to another. This screen uses the
           same code on Next.js and React Native.
@@ -49,6 +52,8 @@ export function HomeScreen() {
         <Button {...linkProps}>Link to user</Button>
       </XStack>
 
+      <SliderDemo />
+    	<CardDemo />
       <SheetDemo />
     </YStack>
   )
